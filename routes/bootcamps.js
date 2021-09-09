@@ -8,13 +8,7 @@ const {
 } = require("../controllers/bootcamps");
 const router = express.Router();
 
-<<<<<<< HEAD
-router.get("/", (req, res) => {});
-
-router.get("/:id", (req, res) => {});
-=======
 router.route("/").get(getBootcamps).post(createBootcamp);
->>>>>>> feature/controllers
 
 router
   .route("/:id")
