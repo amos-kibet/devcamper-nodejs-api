@@ -17,7 +17,7 @@ const BootcampSchema = new mongoose.Schema({
   website: {
     type: String,
     match: [
-      https ?: \/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b( [-a-zA-Z0-9()@:%_\+.~#?&//=]*),
+      `https ?: \/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b( [-a-zA-Z0-9()@:%_\+.~#?&//=]*)`,
       'Please use a valid URL with HTTP or HTTPS'
     ]
   },
@@ -28,7 +28,7 @@ const BootcampSchema = new mongoose.Schema({
   email: {
     type: String,
     match: [
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+      `/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/`,
       'Please enter a valid email'
     ]
   },
